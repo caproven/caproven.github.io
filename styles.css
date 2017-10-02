@@ -1,15 +1,50 @@
-header {
-    background: #151515 url("https://github.com/Caproven/caproven.github.io/blob/master/resources/binding_dark.png?raw=true") 0 0;
-    text-align: center;
-    color: antiquewhite;
-}
-
-body {
+/*css reset*/
+* {
     margin: 0;
     padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/*css begins*/
+body {
     font-family: 'Abel';
+    color: azure;
+    background: #151515 url("resources/px_by_Gre3g.png") 0 0;
 }
 
 ul {
-  list-style-type: none;
+list-style-type: none;
 }
+
+.main {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav {
+    height: 40px;
+}
+
+.L60 {
+    width: 60%;
+    background: pink;
+    float: left;
+    height: inherit;
+}
+
+.R10 {
+    width: 10%;
+    background: teal;
+    float: right;
+    height: inherit;
+}
+
+img {
+    width: 100%;
+}
+
