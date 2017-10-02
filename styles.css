@@ -40,11 +40,16 @@ nav {
 .R10 {
     width: 10%;
     background: teal;
-    float: right;
+    float: left;
     height: inherit;
 }
 
 img {
     width: 100%;
+}
+
+.menu {
+    height: inherit;
+    text-align: center;
 }
 
