@@ -1,6 +1,1 @@
-# lolidontknowwhatimdoing
-this is my description, i guess
-
-
-
-YOOOOOOO
+I'll fill this in when I actually do something with the site.
