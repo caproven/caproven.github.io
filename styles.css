@@ -1,3 +1,7 @@
+/* Background pattern from Toptal Subtle Patterns.
+ * https://www.toptal.com/designers/subtlepatterns/
+ */
+
 /*css reset*/
 * {
     margin: 0;
@@ -11,45 +15,20 @@
 
 /*css begins*/
 body {
-    font-family: 'Abel';
-    color: azure;
-    background: #151515 url("resources/px_by_Gre3g.png") 0 0;
+    font-family: 'Courier';
+    color: floralwhite;
+    background: #151515 url("resources/binding_dark.png") 0 0;
 }
 
-ul {
-list-style-type: none;
-}
-
-.main {
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-nav {
-    height: 40px;
-}
-
-.L60 {
-    width: 60%;
-    background: pink;
-    float: left;
-    height: inherit;
-}
-
-.R10 {
-    width: 10%;
-    background: teal;
-    float: left;
-    height: inherit;
-}
-
-img {
-    width: 100%;
-}
-
-.menu {
-    height: inherit;
+.title {
     text-align: center;
+    margin-top: 25px;
+    margin-bottom: 60px;
 }
 
+.content {
+    font-size: 16px;
+    text-align: center;
+    animation-name: example;
+    animation-duration: 4s;
+}
