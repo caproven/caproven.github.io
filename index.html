@@ -2,18 +2,31 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <title>caproven.info</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="js/external.js"></script>
 </head>
 
 <body>
+
     <div class="title">
         <a href="https://github.com/caproven/GameOfLife"><img src="resources/gliderinvertedtransparent.gif"></a>
-        <h1 style="font-size: 30px">caproven.info</h1>
+        <h1>caproven.info</h1>
     </div>
-    <div class="content">
-        <p>&gt; Insert Content Here &lt;</p>
+
+    <div id="folders">
+        <!-- folder contents populate this div -->
     </div>
+
+    <div id="controls">
+        <!-- <p>&gt; Insert Content Here &lt;</p> -->
+        <input id="txtBox" type="text"/>
+        <input class="btn" type="button" value="set" onclick="setJsonLocalStorage(getElementById('txtBox').value);"/>
+        <input class="btn" type="button" value="view" onclick="console.log(JSON.parse(getJsonLocalStorage()));"/>
+        <input class="btn" type="button" value="clear" onclick="clearFolders();"/>
+    </div>
+
 </body>
 
 </html>

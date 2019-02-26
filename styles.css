@@ -15,18 +15,63 @@
 
 /*css begins*/
 body {
-    font-family: 'Courier New';
     color: floralwhite;
     background: #151515 url("resources/binding_dark.png") 0 0;
 }
 
 .title {
+    font-family: 'Courier New';
+    font-weight: bold;
     text-align: center;
+    font-size: 30px;
     margin-top: 25px;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
 }
 
-.content {
+#controls {
     font-size: 16px;
     text-align: center;
+}
+
+#txtBox {
+    color: floralwhite;
+}
+
+.btn {
+    color: floralwhite;
+}
+
+a {
+    text-decoration: none;
+    color: floralwhite;
+}
+
+#folders {
+    padding: 20px;
+    min-height: 300px;
+    width: 90%;
+    border-width: 1px;
+    border-color: floralwhite;
+    border-style: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: 'Terminus';
+    font-size: 15px;
+}
+
+.folder {
+    min-height: 50px; /* used in case of adding an empty folder */
+    min-width: 100px;
+    margin: 5px;
+    padding: 5px;
+    border-width: 3px;
+    border-color: floralwhite;
+    border-style: double;
+    display: inline-block;
+}
+
+li {
+    list-style-type: none;
 }
