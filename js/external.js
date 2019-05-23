@@ -4,23 +4,23 @@ function setJsonLocalStorage(str) {
 }
 
 function getJsonLocalStorage() {
-    var json = JSON.parse(localStorage.getItem("contents"));
+    let json = JSON.parse(localStorage.getItem("contents"));
 
     clearFolders();
 
-    for (var category in json) {
-        var div = document.createElement("div");
+    for (let category in json) {
+        let div = document.createElement("div");
         div.className = "folder";
 
-        var title = document.createElement("h6");
+        let title = document.createElement("h6");
         title.innerHTML = category;
 
-        var ul = document.createElement("ul");
+        let ul = document.createElement("ul");
 
-        for (var linkName in json[category].links) {
-            var li = document.createElement("ul");
+        for (let linkName in json[category].links) {
+            let li = document.createElement("ul");
 
-            var hyperLink = document.createElement("a");
+            let hyperLink = document.createElement("a");
             hyperLink.textContent = linkName;
             hyperLink.href = json[category].links[linkName];
 
@@ -38,6 +38,6 @@ function getJsonLocalStorage() {
 }
 
 function clearFolders() {
-    var currentFolders = document.getElementById("folders");
+    let currentFolders = document.getElementById("folders");
     currentFolders.innerHTML = "";
 }
