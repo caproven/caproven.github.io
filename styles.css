@@ -19,7 +19,7 @@ body {
     background: #151515 url("resources/binding_dark.png") 0 0;
 }
 
-.title {
+.header {
     font-family: 'Courier New';
     font-weight: bold;
     text-align: center;
