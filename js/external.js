@@ -1,14 +1,14 @@
 const localStorageVar = 'contents';
 
 /**
- * Saves to local storage the stringified JSON representing user's bookmarks.
+ * Saves to local storage the JSON representing user's bookmarks.
  */
-function setLocalStorage(json) {
-  localStorage.setItem(localStorageVar, JSON.stringify(json));
+function setLocalStorage(obj) {
+  localStorage.setItem(localStorageVar, JSON.stringify(obj));
 }
 
 /**
- * Retrieves the JSON representing user's bookmarks from local storage.
+ * Retrieves the Object representing user's bookmarks from local storage.
  */
 function getLocalStorage() {
   return JSON.parse(localStorage.getItem(localStorageVar));
@@ -19,9 +19,9 @@ function getLocalStorage() {
  */
 function constructFolders() {
   clearFolders();
-  const json = getLocalStorage();
+  const bookmarksObj = getLocalStorage();
 
-  for (let [catTitle, catContents] of Object.entries(json)) {
+  for (let [catTitle, catContents] of Object.entries(bookmarksObj)) {
     const div = document.createElement('div');
     div.className = 'folder';
     document.getElementById('folders').appendChild(div);
@@ -49,23 +49,24 @@ function constructFolders() {
 }
 
 /**
- * Parse the current HTML page for user's bookmarks, returning them as in JSON.
+ * Parse the HTML page for user's bookmarks, returning them as an Object.
  */
-function foldersToJson() {
-  let json = {};
+function foldersToObj() {
+  let bookmarksObj = {};
 
   const foldersDOM = document.getElementsByClassName('folder');
   for (let folder of foldersDOM) {
     const title = folder.firstChild.innerText;
-    json[title] = {};
+    bookmarksObj[title] = {};
 
     const linksDOM = folder.lastChild;
-    for (let link of linksDOM.childNodes) {
-      json[title][link.firstChild.innerText] = link.firstChild.href;
+    for (let linkElementHTML of linksDOM.childNodes) {
+      const link = linkElementHTML.firstChild;
+      bookmarksObj[title][link.innerText] = link.href;
     }
   }
 
-  return json;
+  return bookmarksObj;
 }
 
 /**
