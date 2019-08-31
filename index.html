@@ -10,26 +10,27 @@
 
 <body onload="constructFolders();">
 
-    <div class="header">
+    <div id="container">
+        <div class="header">
         <a href="https://github.com/caproven/GameOfLife">
-          <img src="resources/gliderinvertedtransparent.gif">
+            <img src="resources/gliderinvertedtransparent.gif">
         </a>
         <h1>caproven.info</h1>
-    </div>
-
-    <div id="folders">
+        </div>
+        
+        <div id="folders">
         <!-- folder contents populate this div -->
-    </div>
-
-    <div id="controls">
-        <!-- <p>&gt; Insert Content Here &lt;</p> -->
+        </div>
+        
+        <!-- <div id="controls">
         <input id="txtBox" type="text"/>
         <input class="btn" type="button" value="set"
-          onclick="setLocalStorage(JSON.parse(document.getElementById('txtBox').value));"/>
+            onclick="setLocalStorage(JSON.parse(document.getElementById('txtBox').value));"/>
         <input class="btn" type="button" value="print"
-          onclick="console.log(getLocalStorage())"/>
+            onclick="console.log(getLocalStorage())"/>
         <input class="btn" type="button" value="clear"
-          onclick="clearFolders();"/>
+            onclick="clearFolders();"/>
+        </div> -->
     </div>
 
 </body>

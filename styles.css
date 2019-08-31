@@ -1,6 +1,5 @@
 /* Background pattern from Toptal Subtle Patterns.
- * https://www.toptal.com/designers/subtlepatterns/
- */
+ https://www.toptal.com/designers/subtlepatterns/ */
 
 /*css reset*/
 * {
@@ -13,10 +12,29 @@
     background: transparent;
 }
 
-/*css begins*/
 body {
     color: floralwhite;
     background: #151515 url("resources/binding_dark.png") 0 0;
+}
+
+/* Main wrapper */
+#container {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+/* Wrapper for all folders */
+#folders {
+    font-size: 15px;
+
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: minmax(40px, auto);
+    grid-gap: 5px;
 }
 
 .header {
@@ -26,6 +44,19 @@ body {
     font-size: 30px;
     margin-top: 25px;
     margin-bottom: 10px;
+
+    grid-column: 1 / -1;
+}
+
+.folder {
+    border-width: 3px;
+    border-color: floralwhite;
+    border-style: double;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 5px;
 }
 
 #controls {
@@ -44,32 +75,6 @@ body {
 a {
     text-decoration: none;
     color: floralwhite;
-}
-
-#folders {
-    padding: 20px;
-    min-height: 300px;
-    width: 90%;
-    border-width: 1px;
-    border-color: floralwhite;
-    border-style: none;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-family: 'Terminus';
-    font-size: 15px;
-}
-
-.folder {
-    min-height: 50px; /* used in case of adding an empty folder */
-    min-width: 100px;
-    margin: 5px;
-    padding: 5px;
-    border-width: 3px;
-    border-color: floralwhite;
-    border-style: double;
-    display: inline-block;
 }
 
 li {
