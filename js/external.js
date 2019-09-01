@@ -20,6 +20,11 @@ function getLocalStorage() {
 function constructFolders() {
   clearFolders();
   const bookmarksObj = getLocalStorage();
+  
+  // skip execution if no local storage has been set
+  if (!bookmarksObj) {
+    return;
+  }
 
   for (let [catTitle, catContents] of Object.entries(bookmarksObj)) {
     const div = document.createElement('div');
